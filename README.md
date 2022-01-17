@@ -30,7 +30,7 @@ Then create two ovs internal port **net1** and **net2** under bridge **br1**.
   sudo ovs-vsctl add-port br1 net1 -- set interface net1 type=internal\
   sudo ovs-vsctl add-port br1 net2 -- set interface net2 type=internal
 
-we will now configure IP on these two ports otherwise host machine wont have the route to reach **net1** and **net2** network.
+We will now configure IP on these two ports otherwise host machine wont have the route to reach **net1** and **net2** network.
 
   sudo ifconfig net1 10.0.1.1 netmask 255.255.255.0 up\
   sudo ifconfig net2 10.0.2.1 netmask 255.255.255.0 up
