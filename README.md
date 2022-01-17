@@ -10,7 +10,7 @@ Tow docker hosts are in different network and isolated by layer 3. We will have 
 
 ![2](https://user-images.githubusercontent.com/22352861/149739304-68005da3-5191-432e-a88c-9a27e61d7814.PNG)
 
-# specifications:
+# Specifications:
 ###### net1: 10.0.1.0/24
 ###### net2: 10.0.1.0/24
 
