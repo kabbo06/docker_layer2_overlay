@@ -15,3 +15,31 @@ Tow docker hosts are in different network and isolated by layer 3. We will have 
 ###### net2: 10.0.1.0/24
 
 # Configuration:
+### Docker host1:
+First we will launch two dockers **doc1** and **doc2** from host1.
+  
+  docker run -di --name doc1 debian\
+  docker run -di --name doc2 debian
+
+Now, create a bridge interface named **br1** using ovs utility.
+
+  sudo ovs-vsctl add-br br1
+  
+Then create two ovs internal port (**net1** and **net2** under bridge **br1**.
+
+  sudo ovs-vsctl add-port br1 net1 -- set interface net1 type=internal\
+  sudo ovs-vsctl add-port br1 net2 -- set interface net2 type=internal
+
+we will now configure IP on these two ports otherwise host machine doesn't have the route to reach **net1** and **net2** network.
+
+  sudo ifconfig net1 10.0.1.1 netmask 255.255.255.0 up\
+  sudo ifconfig net2 10.0.2.1 netmask 255.255.255.0 up
+  
+Now we can associated rote in host machine route table.
+
+  
+
+
+    
+  
+ 
