@@ -77,6 +77,13 @@ Our configuration is over. we can check now.
 # verifying:
 Now, we will check our configuration. First ping **doc3** from **doc1** container. They are in **net1**.
 
+![44](https://user-images.githubusercontent.com/22352861/149752929-0d044edb-130b-4c80-80ae-e3040a2fb98a.PNG)
+
+Now ping **doc4** from **doc2** container.
+
+![55](https://user-images.githubusercontent.com/22352861/149752979-26961764-55bc-43c6-8e63-d2db425c118c.PNG)
+
+We can see ping is succeeding. we will get similar result from host2 container also because a distribube layer 2 network is created between these two docker host. 
 
 
     
