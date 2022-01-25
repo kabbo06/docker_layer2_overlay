@@ -6,7 +6,7 @@ In this documentation, we will ensure docker layer 2 connectivity over different
 ###### Docker host2 IP: 172.16.20.100/24
 
 # Scenario:
-Tow docker hosts are in different network and isolated by layer 3. We will need bridge (br1) interface on each host and connect with docker internal network. In that case Open vSwitch (**OVS**) will be used. We will create two internal network ( **10.0.1.0/24**  and **10.0.2.0/24**) on each docker host and establish layer 2 connectivity between them. We will achive this by creating tunnel between these hosts. We will use vxlan tunneling for this experiment. So, our whole network scenario will look like this.
+Two docker hosts are in different network and isolated by layer 3. We will need bridge (br1) interface on each host and connect with docker internal network. In that case Open vSwitch (**OVS**) will be used. We will create two internal network ( **10.0.1.0/24**  and **10.0.2.0/24**) on each docker host and establish layer 2 connectivity between them. We will achive this by creating tunnel between these hosts. We will use vxlan tunneling for this experiment. So, our whole network scenario will look like this.
 
 ![2](https://user-images.githubusercontent.com/22352861/149739304-68005da3-5191-432e-a88c-9a27e61d7814.PNG)
 
